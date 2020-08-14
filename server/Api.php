@@ -5,6 +5,7 @@ abstract class Api
 
     public function __construct(ConnectionInterface $connection){
         $this->db=$connection;
+        $this->db = $this->db->getConnection();
     }
 
     public function getItem(){}
